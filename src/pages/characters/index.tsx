@@ -4,14 +4,9 @@ import Image from 'next/image';
 import './character.scss';
 import Link from 'next/link';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Character } from '../../types/characters';
 
-const Characters: React.FC = () => {
-
-  interface Character {
-    id: number;
-    name: string;
-    image: string;
-  }
+const Characters: React.FC = () => { 
 
   const [characters, setCharacters] = useState<Character[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);

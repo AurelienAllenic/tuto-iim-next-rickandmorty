@@ -5,21 +5,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import './character.scss';
 import { FaArrowLeft } from "react-icons/fa";
+import { OneCharacter } from '../../types/characters';
 
 const CharacterElem: React.FC = () => {
-  interface Character {
-    id: number;
-    name: string;
-    image: string;
-    status: string;
-    species: string;
-    origin: {name: string;};
-    location: {name: string;};
-  }
+  
 
   const router = useRouter();
   const { id } = router.query;
-  const [character, setCharacter] = useState<Character | null>(null);
+  const [character, setCharacter] = useState<OneCharacter | null>(null);
 
   useEffect(() => {
     if (id) {
