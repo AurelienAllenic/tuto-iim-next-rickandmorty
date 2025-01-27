@@ -6,7 +6,14 @@ import Link from 'next/link';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Characters: React.FC = () => {
-  const [characters, setCharacters] = useState<any[]>([]);
+
+  interface Character {
+    id: number;
+    name: string;
+    image: string;
+  }
+
+  const [characters, setCharacters] = useState<Character[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(1);
 

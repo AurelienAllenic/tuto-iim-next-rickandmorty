@@ -7,9 +7,19 @@ import './character.scss';
 import { FaArrowLeft } from "react-icons/fa";
 
 const CharacterElem: React.FC = () => {
+  interface Character {
+    id: number;
+    name: string;
+    image: string;
+    status: string;
+    species: string;
+    origin: {name: string;};
+    location: {name: string;};
+  }
+
   const router = useRouter();
   const { id } = router.query;
-  const [character, setCharacter] = useState<any | null>(null);
+  const [character, setCharacter] = useState<Character | null>(null);
 
   useEffect(() => {
     if (id) {
@@ -22,9 +32,10 @@ const CharacterElem: React.FC = () => {
   return (
     <div className='container-one-character'>
       <Link href="/characters" passHref>
-        <button className="back-button"><FaArrowLeft /> Retour à l'accueil</button>
+        <button className="back-button">
+          <FaArrowLeft /> Retour &agrave; l&apos;accueil
+        </button>
       </Link>
-
       {character ? (
         <>
         <div className='container-character-infos'>
