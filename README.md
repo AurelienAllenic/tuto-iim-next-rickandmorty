@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
+# Rick and Morty project
+
+This project was created following an exercise on next's website.
+It consists of retrieving data from the api, and display a list of character.
+On click of character, the user is redirected to the character's page.
+
+
 ## Getting Started
 
 First, run the development server:
