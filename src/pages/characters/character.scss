@@ -5,6 +5,10 @@ h1{
 body{
     background: black;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .container_characters{
     display: grid;
@@ -13,7 +17,7 @@ body{
     width: 100%;
     flex-direction: column;
     gap: 2rem;
-    padding: 50px 500px;
+    padding: 50px;
     background: black;
     a{
         display: flex;
@@ -48,7 +52,7 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 15px;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
     background: black;
@@ -116,5 +120,32 @@ body{
                 transition: all ease-in-out 0.3s;
             }
         }
+    }
+}
+
+@media(max-width: 1150px){
+    .container-one-character{
+        .container-character-infos{
+            width: 50%;
+        }
+    }
+}
+@media(max-width: 542px){
+    .container-one-character{
+        .container-character-infos{
+            width: 75%;
+        }
+    }
+}
+@media(max-width: 400px){
+    .container-one-character{
+        .container-character-infos{
+            width: 90%;
+        }
+    }
+}
+@media(max-width: 664px){
+    .container_characters{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
